@@ -1,0 +1,23 @@
+{
+    "name": "PGMate Dev Environment",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": "."
+    },
+    "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
+    "postCreateCommand": "docker compose up -d",
+    "forwardPorts": [8080, 1337],
+    "portsAttributes": {
+      "8080": {
+        "label": "PGMate Backend",
+        "onAutoForward": "openPreview"
+      },
+      "1337": {
+        "label": "Custom Port",
+        "onAutoForward": "notify"
+      }
+    },
+    "features": {
+      "ghcr.io/devcontainers/features/docker-in-docker": {}
+    }
+  }
