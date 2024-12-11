@@ -1,0 +1,18 @@
+
+tasks:
+  - name: Start PGMate
+    command: |
+      docker compose up -d
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+    visibility: public
+    description: "PGMate GUI"
+  - port: 5432
+    onOpen: ignore
+    description: "Postgres"
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
