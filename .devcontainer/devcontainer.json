@@ -2,7 +2,7 @@
   "name": "PGMate Dev Environment",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "pgmate",
-  "workspaceFolder": "/workspaces/pgmate",
+  "workspaceFolder": "/workspaces/demo",
   "postCreateCommand": "docker compose up -d",
   "forwardPorts": [8080, 1337],
   "portsAttributes": {
