@@ -7,12 +7,13 @@
   "forwardPorts": [8080, 1337],
   "portsAttributes": {
     "8080": {
-      "label": "PGMate Backend",
-      "onAutoForward": "openPreview"
+      "label": "PGMate GUI",
+      "onAutoForward": "openPreview",
+      "visibility": "public"
     },
-    "1337": {
-      "label": "Custom Port",
-      "onAutoForward": "notify"
+    "5432": {
+      "label": "Postgres Port",
+      "onAutoForward": "ignore"
     }
   },
   "features": {
