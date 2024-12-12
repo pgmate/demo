@@ -24,7 +24,7 @@ Within a couple of minutes, PGMate login page will open automatically.
 
 ```bash
 # Clone the demo:
-git clone https://gitpod.io/#https://github.com/pgmate/demo pgmate
+git clone https://github.com/pgmate/demo pgmate
 
 # Run with Docker:
 cd pgmate
